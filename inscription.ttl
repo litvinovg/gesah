@@ -65,3 +65,21 @@
                         rdfs:label "inscription for"@en-us; 
                         rdfs:domain :Inscription_Activity;
                         rdfs:range :Cultural_Object . 
+
+:has_participant rdf:type owl:ObjectProperty; 
+                 owl:inverseOf :participates_in ;
+                rdfs:subPropertyOf obo:RO_0000057;
+                 rdfs:label "has_participant"@IRI-based; 
+                 rdfs:label "Teilnehmer"@de-de; 
+                 rdfs:label "has participant"@en-us; 
+                 rdfs:domain :Activity;
+                 rdfs:range foaf:Agent . 
+
+:participates_in rdf:type owl:ObjectProperty; 
+                 owl:inverseOf :has_participant ;
+                rdfs:subPropertyOf obo:RO_0000056;
+                 rdfs:label "participates_in"@IRI-based; 
+                 rdfs:label "beteiligt an"@de-de; 
+                 rdfs:label "participates in"@en-us; 
+                 rdfs:domain foaf:Agent;
+                 rdfs:range :Activity . 
