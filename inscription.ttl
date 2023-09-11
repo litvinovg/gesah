@@ -1,0 +1,32 @@
+@prefix : 		<http://ontology.tib.eu/gesah/> .
+@prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: 		<http://www.w3.org/2002/07/owl#> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: 		<http://purl.org/dc/elements/1.1/> .
+@prefix xml: 		<http://www.w3.org/XML/1998/namespace> .
+@prefix vitro: 		<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix event: 		<http://purl.org/NET/c4dm/event.owl#> .
+@prefix dcterms: 		<http://purl.org/dc/terms/> .
+@prefix obo: 		<http://purl.obolibrary.org/obo/> .
+@prefix bibo: 		<http://purl.org/ontology/bibo/> .
+@prefix skos: 		<http://www.w3.org/2004/02/skos/core#> .
+@prefix : 		<http://ontology.tib.eu/gesah/> .
+@prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
+@prefix vivo: 		<http://vivoweb.org/ontology/core#> .
+@prefix ecrm: 		<http://erlangen-crm.org/170309/> .
+@base 			<http://ontology.tib.eu/gesah/> .
+
+:object_of_inscription rdf:type owl:ObjectProperty; 
+                       owl:inverseOf :has_inscription_object ;
+                       rdfs:label "object_of_inscription"@IRI-based; 
+                       rdfs:label "Beschriftung"@de-de; 
+                       rdfs:label "Inscription"@en-us; 
+                       rdfs:domain :Cultural_Object;
+                       rdfs:range :Inscription_Activity .
+ 
+:Inscription_Activity rdf:type owl:Class; 
+                      rdfs:subClassOf :Activity ;
+                      rdfs:label "Inscription_Activity"@IRI-based; 
+                      rdfs:label "Aktivität Beschriftung"@de-de; 
+                      rdfs:label "Inscription activity"@en-us . 
