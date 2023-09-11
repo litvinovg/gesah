@@ -17,6 +17,19 @@
 @prefix ecrm: 		<http://erlangen-crm.org/170309/> .
 @base 			<http://ontology.tib.eu/gesah/> .
 
+:Inscription_on_image rdf:type owl:Class; 
+                      rdfs:subClassOf :Inscription ;
+                      rdfs:label "Inscription_on_image"@IRI-based; 
+                      rdfs:label "Beschriftung auf Darstellung"@de-de; 
+                      rdfs:label "Inscription on image"@en-us . 
+
+#  --------------------------- Class  55------------------------- 
+:Inscription_on_support rdf:type owl:Class; 
+                        rdfs:subClassOf :Inscription ;
+                        rdfs:label "Inscription_on_support"@IRI-based; 
+                        rdfs:label "Beschriftung auf Trägermaterial"@de-de; 
+                        rdfs:label "Inscription on support"@en-us . 
+
 :object_of_inscription rdf:type owl:ObjectProperty; 
                        owl:inverseOf :has_inscription_object ;
                        rdfs:label "object_of_inscription"@IRI-based; 
@@ -83,3 +96,21 @@
                  rdfs:label "participates in"@en-us; 
                  rdfs:domain foaf:Agent;
                  rdfs:range :Activity . 
+
+:is_place_of rdf:type owl:ObjectProperty; 
+             owl:inverseOf :has_place ;
+            rdfs:subPropertyOf obo:RO_0001015;
+             rdfs:label "is_place_of"@IRI-based; 
+             rdfs:label "Ort von"@de-de; 
+             rdfs:label "place of"@en-us; 
+             rdfs:domain vivo:GeographicLocation;
+             rdfs:range obo:BFO_0000015 . 
+
+:has_place rdf:type owl:ObjectProperty; 
+           owl:inverseOf :is_place_of ;
+          rdfs:subPropertyOf obo:RO_0001025;
+           rdfs:label "has_place"@IRI-based; 
+           rdfs:label "Ort"@de-de; 
+           rdfs:label "Place"@en-us; 
+           rdfs:domain obo:BFO_0000015;
+           rdfs:range vivo:GeographicLocation . 
