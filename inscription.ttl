@@ -17,6 +17,13 @@
 @prefix ecrm: 		<http://erlangen-crm.org/170309/> .
 @base 			<http://ontology.tib.eu/gesah/> .
 
+
+:Activity rdf:type owl:Class; 
+          rdfs:subClassOf obo:BFO_0000015 ;
+          rdfs:label "Activity"@IRI-based; 
+          rdfs:label "Aktivität"@de-de; 
+          rdfs:label "Activity"@en-us . 
+
 :Inscription_on_image rdf:type owl:Class; 
                       rdfs:subClassOf :Inscription ;
                       rdfs:label "Inscription_on_image"@IRI-based; 
