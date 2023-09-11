@@ -30,3 +30,38 @@
                       rdfs:label "Inscription_Activity"@IRI-based; 
                       rdfs:label "Aktivität Beschriftung"@de-de; 
                       rdfs:label "Inscription activity"@en-us . 
+
+:object_of_inscription rdf:type owl:ObjectProperty; 
+                       owl:inverseOf :has_inscription_object ;
+                       rdfs:label "object_of_inscription"@IRI-based; 
+                       rdfs:label "Beschriftung"@de-de; 
+                       rdfs:label "Inscription"@en-us; 
+                       rdfs:domain :Cultural_Object;
+                       rdfs:range :Inscription_Activity . 
+
+
+:output_of_inscription rdf:type owl:ObjectProperty; 
+                       owl:inverseOf :has_inscription_output ;
+                      rdfs:subPropertyOf obo:RO_0002353;
+                       rdfs:label "output_of_inscription"@IRI-based; 
+                       rdfs:label "Beschriftung"@de-de; 
+                       rdfs:label "Inscription"@en-us; 
+                       rdfs:domain :Inscription;
+                       rdfs:range :Inscription_Activity . 
+
+:has_inscription_output rdf:type owl:ObjectProperty; 
+                        owl:inverseOf :output_of_inscription ;
+                       rdfs:subPropertyOf obo:RO_0002234;
+                        rdfs:label "has_inscription_output"@IRI-based; 
+                        rdfs:label "hat Ergebnis der Beschriftung"@de-de; 
+                        rdfs:label "has inscription output"@en-us; 
+                        rdfs:domain :Inscription_Activity;
+                        rdfs:range :Inscription . 
+
+:has_inscription_object rdf:type owl:ObjectProperty; 
+                        owl:inverseOf :object_of_inscription ;
+                        rdfs:label "has_inscription_object"@IRI-based; 
+                        rdfs:label "Beschriftung für"@de-de; 
+                        rdfs:label "inscription for"@en-us; 
+                        rdfs:domain :Inscription_Activity;
+                        rdfs:range :Cultural_Object . 
